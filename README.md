@@ -62,7 +62,7 @@ GET
 
 - Contributions, issues and feature requests are welcome!
 
-- Feel free to check the [issues page](https://github.com/taiwocoker/Find_a_house_app/issues)
+- Feel free to check the [issues page](https://github.com/Arinpe/Car_Rentals-Frontend/issues)
 
 ## Show your support
 
