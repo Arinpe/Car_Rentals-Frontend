@@ -1,6 +1,6 @@
 # Find Your House
 
-An App where you can view and add favourite houses to a list.
+An App where you can view and rent your favourite cars to a list.
 
 # Home Page
 ![screenshot](./snapshot2.PNG)
@@ -11,7 +11,7 @@ An App where you can view and add favourite houses to a list.
 
 ## About this project
 
-- This Application is built as a front end app consuming a Ruby on Rails [API](https://arcane-scrubland-62933.herokuapp.com/) separately deployed to Heroku. Authorization was from Auth0
+- This Application is built as a front end app consuming a Ruby on Rails [API]() separately deployed to Heroku. Authorization was from Auth0
 
 ## End Points
 
@@ -20,8 +20,8 @@ POST
 - /favourites - (create favourites)
 
 GET
-- /houses - (fetch all houses)
-- /favourites - (fetch favourite houses)
+- /cars - (fetch all cars)
+- /favourites - (fetch favourite cars)
 
 ## Built With
 - ReactJs
@@ -36,13 +36,13 @@ GET
 - ES6 JavaScript.
 
 ## Live Demo
-- For the full working application click [here](https://find-your-house.netlify.app/)
+- For the full working application click [here]()
 
 ## Installation
 - To get a local copy up and running follow these simple example steps.
 
 ### Setup
--  Clone [this](https://github.com/taiwocoker/Find_a_house_app) repo
+-  Clone [this](https://github.com/Arinpe/Car_Rentals-Frontend) repo
 
 ### Follow:
 1. cd into the project directory
@@ -52,11 +52,11 @@ GET
 
 ## Author
 
-👤 **Taiwo Coker**
+👤 **Adesuyi Adetola**
 
-- Github: [@githubhandle](https://github.com/taiwocoker)
-- Twitter: [@twitterhandle](https://twitter.com/SelloCoker)
-- Linkedin: [linkedin](https://linkedin.com/in/taiwo-coker)
+- Github: [@arinpe](https://github.com/Arinpe)
+- Twitter: [_detola_](https://twitter.com/_detola_)
+- Linkedin: [aadetola](https://linkedin.com/in/aadtola)
 
 ## 🤝 Contributing
 
