@@ -17,7 +17,7 @@ const HousePage = ({
     loadHouseSuccess({});
     loadHousePageDetails();
   }, [id]);
-  if (!House) return <h2 className="section-title">No house to display</h2>;
+  if (!House) return <h2 className="section-title">No Car to display</h2>;
   const { name, description } = House;
   return (
     <>

@@ -12,7 +12,7 @@ const Navbar = ({ auth, Loading }) => {
     <header className="sticky-top">
       <nav className="navbar navbar-expand-lg navbar-light bg-secondary p-2 px-md-5">
         <Link to="/" className="navbar-brand color">
-          FindIt
+          TeeCars
         </Link>
         <button
           className="navbar-toggler"

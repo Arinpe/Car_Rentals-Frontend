@@ -1,87 +1,56 @@
+header {
+  box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.navbar-nav a {
+  text-transform: capitalize;
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem;
+  transition: all 0.4s linear;
+}
+
 body {
-  margin: 0;
   font-family:
     -apple-system,
     BlinkMacSystemFont,
     'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
     'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: #f1f5f8;
+  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.color {
-  font-size: 2rem !important;
-  color: gold !important;
-}
-
-.li-color {
-  color: gold !important;
-}
-
-.bg-1 {
-  background-color: lavender;
-}
-
-.spin {
-  margin: 1.2rem auto;
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-}
-
-.height {
-  min-height: 100vh;
-}
-
-.bg-image {
-  background: url(assets/house5.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.defaultHero {
+  margin-top: 7vh;
+  min-height: 93vh;
+  background: url("./images/defaultBcg.png") center/cover no-repeat;
 }
 
 .banner {
   display: inline-block;
   background: rgba(0, 0, 0, 0.5);
-  color: white;
   padding: 2rem 1rem;
   text-align: center;
   text-transform: capitalize;
   letter-spacing: 3px;
 }
 
-.banner h1,
-.main h1 {
+.banner h1 {
   font-size: 2.5rem;
 }
 
-.banner div,
-.main div {
+.banner div {
   width: 10rem;
   height: 5px;
   background: #af9a7d;
@@ -91,21 +60,6 @@ body {
 .banner p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-}
-
-.lin {
-  border: 1px solid;
-  text-decoration: none !important;
-}
-
-.cards {
-  width: 28rem;
-  margin-bottom: 20px;
-}
-
-.div-cards {
-  display: flex;
-  justify-content: space-around;
 }
 
 @media screen and (min-width: 576px) {
@@ -125,5 +79,237 @@ body {
 
   .banner h1 {
     font-size: 4rem;
+  }
+}
+
+.banner-btn {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 3px;
+  color: #222;
+  background: #af9a7d;
+  padding: 0.4rem 0.9rem;
+  border: 3px solid #af9a7d;
+  transition: all 0.3s linear;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.banner-btn:hover {
+  background: transparent;
+  color: #af9a7d;
+  text-decoration: none;
+}
+
+.super-cars {
+  padding: 5rem 0;
+}
+
+.super-cars-center {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 40px;
+}
+
+@media screen and (min-width: 776px) {
+  .super-cars-center {
+    width: 90vw;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .super-cars-center {
+    width: 95vw;
+    max-width: 1170px;
+  }
+}
+
+.car {
+  box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.3s linear;
+  position: relative;
+}
+
+.car:hover {
+  box-shadow: 4px 10px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.img-container {
+  position: relative;
+  height: 100%;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: all 0.3s linear;
+}
+
+.car-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(0);
+  transition: all 0.3s linear;
+}
+
+.img-container:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.detail img {
+  border-radius: 0.25rem;
+  width: 100%;
+  min-height: 45vh;
+}
+
+.img-container:hover img {
+  opacity: 0.3;
+}
+
+.img-container:hover .car-link {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.car-info {
+  background: #cfcfcf;
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title h4 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.section-title div {
+  width: 8rem;
+  height: 5px;
+  margin: 0 auto;
+  background: #af9a7d;
+}
+
+.car-section {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.detail {
+  width: 85vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.detail p {
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 1.8;
+}
+
+.detail span {
+  margin-right: 0.5rem;
+}
+
+.detail-data {
+  background: #dac6ac;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+@media screen and (min-width: 992px) {
+  .detail {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+    align-items: center;
+  }
+}
+
+.loader,
+.loader::before,
+.loader::after {
+  background: transparent;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+
+.loader {
+  color: #af9a7d;
+  text-indent: -9999em;
+  margin: 88px auto;
+  margin-top: 20rem;
+  position: relative;
+  font-size: 3rem;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.loader::before,
+.loader::after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+
+.loader::before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.loader::after {
+  left: 1.5em;
+}
+
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
   }
 }

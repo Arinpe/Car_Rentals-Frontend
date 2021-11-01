@@ -7,11 +7,12 @@ export default function Auth(historyValue) {
     domain: process.env.REACT_APP_AUTH0_DOMAIN,
     clientID: process.env.REACT_APP_AUTH0_CLIENT_ID,
     redirectUri: process.env.REACT_APP_AUTH0_CALLBACK_URL,
-    audience: process.env.REACT_APP_AUTH0_AUDIENCE,
     responseType: 'token id_token',
     scope: 'openid profile email',
   });
+
   const login = () => auth.authorize();
+
   const setSession = authResult => {
     const expiresAt = JSON.stringify(
       authResult.expiresIn * 1000 + new Date().getTime(),
@@ -20,21 +21,25 @@ export default function Auth(historyValue) {
     localStorage.setItem('id_token', authResult.idToken);
     localStorage.setItem('expires_at', expiresAt);
   };
+
   const handleAuthentication = () => {
     auth.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
         setSession(authResult);
-        history.push('/');
+        // history.push('/');
       } else if (err) {
+        console.log(err);
         history.push('/error');
         throw new Error(err);
       }
     });
   };
+
   const isAuthenticated = () => {
     const expiresAt = JSON.parse(localStorage.getItem('expires_at'));
     return new Date().getTime() < expiresAt;
   };
+
   const logout = () => {
     localStorage.removeItem('access_token');
     localStorage.removeItem('id_token');
@@ -44,6 +49,7 @@ export default function Auth(historyValue) {
       returnTo: process.env.REACT_APP_API_URL,
     });
   };
+
   const getAccessToken = () => {
     const accessToken = localStorage.getItem('access_token');
     if (!accessToken) {
@@ -52,11 +58,20 @@ export default function Auth(historyValue) {
     return accessToken;
   };
 
+  const getProfile = cb => {
+    if (userProfile) return cb(userProfile);
+    return auth.client.userInfo(getAccessToken(), (err, profile) => {
+      if (profile) userProfile = profile;
+      cb(profile, err);
+    });
+  };
+
   return {
     login,
     isAuthenticated,
     logout,
     handleAuthentication,
-   
+    getAccessToken,
+    getProfile,
   };
 }
