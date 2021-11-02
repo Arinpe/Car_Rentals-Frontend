@@ -1,19 +1,19 @@
 /* eslint-disable no-param-reassign */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import {
-  fetchMeasurement, fetchMeasurements, addMeasure, addMeasurement,
+  fetchAppointments, fetchAppointment, addMeasure, createAppointment,
 } from '../services/request';
 import { SET_READING, SET_READINGS, CREATE_READING } from '../actions/types';
 
 const initialState = {
-  measurement: {},
-  measurements: [],
+  cars: [],
+  car: {},
 };
 
 export const getReading = createAsyncThunk(
   SET_READING,
   async (id) => {
-    const response = await fetchMeasurement(id);
+    const response = await fetchAppointment(id);
     return response;
   },
 );
@@ -21,7 +21,7 @@ export const getReading = createAsyncThunk(
 export const getReadings = createAsyncThunk(
   SET_READINGS,
   async () => {
-    const response = await fetchMeasurements();
+    const response = await fetchAppointments();
     return response;
   },
 );
@@ -34,32 +34,32 @@ export const createMeasure = createAsyncThunk(
   },
 );
 
-export const createMeasurement = createAsyncThunk(
+export const newAppointment = createAsyncThunk(
   CREATE_READING,
   async (data) => {
     const { formData, id } = data;
-    const response = await addMeasurement(formData, id);
+    const response = await createAppointment(formData, id);
     return response;
   },
 );
 
-export const measurementSlice = createSlice({
+export const carSlice = createSlice({
   name: 'measurements',
   initialState,
   reducers: {
-    setReadings: (state, { payload }) => {
-      state.measurements = payload;
+    setCars: (state, { payload }) => {
+      state.cars = payload;
     },
-    setReading: (state, { payload }) => {
-      state.measurement = payload;
+    setCar: (state, { payload }) => {
+      state.car = payload;
     },
   },
 
 });
 
-export const { setReading, setReadings } = measurementSlice.actions;
+export const { setCar, setCars } = carSlice.actions;
 
-export const selectReading = (state) => state.measurement.measurement;
-export const selectReadings = (state) => state.measurement.measurements;
+export const selectCar = (state) => state.car.car;
+export const selectCars = (state) => state.car.cars;
 
-export default measurementSlice.reducer;
+export default carSlice.reducer;

@@ -17,12 +17,9 @@ instance.interceptors.request.use(
     const header = getHeaders();
     if (header) {
       const {
-        authorization, uid, client, tokenType,
+        authorization,
       } = header;
-      config.headers['access-token'] = authorization || '';
-      config.headers.uid = uid || '';
-      config.headers.client = client || '';
-      config.headers['token-type'] = tokenType || '';
+      config.headers.authorization = authorization ? `Bearer ${authorization}` : '';
     }
     return config;
   },
@@ -43,39 +40,39 @@ export const postRequest = async (url, body) => {
 };
 
 export const signup = async (formData) => {
-  const res = await postRequest(`${baseApi}/auth`, formData);
-  setHeaders(res.headers);
+  const res = await postRequest(`${baseApi}/users`, formData);
+  setHeaders(res.data.token);
   return res.data.data;
 };
 
 export const signIn = async (formData) => {
-  const res = await postRequest(`${baseApi}/auth/sign_in`, formData);
-  setHeaders(res.headers);
+  const res = await postRequest(`${baseApi}/login`, formData);
+  setHeaders(res.data.token);
   return res.data.data;
 };
 
 export const logOut = async () => {
   try {
-    toast.success('You have successfully logged out');
     clearHeaders();
+    toast.success('You have successfully logged out');
   } catch (error) {
     error.status = 500;
     loginHandleError(['An error ocurred']);
   }
 };
 
-export const fetchMeasurements = async () => {
+export const fetchAppointments = async () => {
   try {
-    const res = await instance.get(`${baseApi}/measures`);
+    const res = await instance.get(`${baseApi}/appointments`);
     return res.data;
   } catch (error) {
     return loginHandleError(error);
   }
 };
 
-export const fetchMeasurement = async (id = 2) => {
+export const fetchAppointment = async (id = 2) => {
   try {
-    const res = await instance.get(`${baseApi}/measures/${id}`);
+    const res = await instance.get(`${baseApi}/appointments/${id}`);
     return res.data;
   } catch (error) {
     return loginHandleError(error);
@@ -91,11 +88,13 @@ export const addMeasure = async (formData) => {
   }
 };
 
-export const addMeasurement = async (formData, id) => {
+export const createAppointment = async (formData) => {
   try {
-    const res = await postRequest(`${baseApi}/measures/${id}/new`, formData);
+    const res = await postRequest(`${baseApi}/appointments`, formData);
+
     return res.data;
   } catch (error) {
+    console.log(error);
     return loginHandleError(error);
   }
 };
@@ -103,6 +102,25 @@ export const addMeasurement = async (formData, id) => {
 export const getUser = async () => {
   try {
     const res = await instance.get(`${baseApi}/me`);
+    return res.data;
+  } catch (error) {
+    return loginHandleError(error);
+  }
+};
+
+export const getCars = async () => {
+  try {
+    const res = await instance.get(`${baseApi}/cars`);
+    return res.data;
+  } catch (error) {
+    return loginHandleError(error);
+  }
+};
+
+export const fetchCar = async (id) => {
+  try {
+    const res = await instance.get(`${baseApi}/cars/${id}`);
+    console.log(res);
     return res.data;
   } catch (error) {
     return loginHandleError(error);

@@ -4,14 +4,9 @@ import { localStorageKey } from './constants';
 export const getHeaders = () => (
   localStorage.getItem(localStorageKey) ? JSON.parse(localStorage.getItem(localStorageKey)) : null
 );
-export const setHeaders = (data) => {
-  const { uid, client, expiry } = data;
+export const setHeaders = (token) => {
   const body = {
-    authorization: data['access-token'],
-    tokenType: data['token-type'],
-    uid,
-    client,
-    expiry,
+    authorization: token,
   };
   localStorage.setItem(localStorageKey, JSON.stringify(body));
 };
