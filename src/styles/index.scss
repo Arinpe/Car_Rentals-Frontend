@@ -9,8 +9,10 @@
 }
 
 .measurements {
-  max-width: 420px;
+  max-width: 1600px;
   margin: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .header {
@@ -127,4 +129,14 @@ a {
   position: absolute;
   right: 10px;
   background: transparent;
+}
+
+.carLinks {
+  width: calc(25% - 10px);
+  margin: 5px;
+}
+
+.card-title {
+  font-size: 1rem;
+  text-transform: uppercase;
 }
