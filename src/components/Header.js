@@ -12,7 +12,7 @@ const Header = ({ hide }) => {
   return (
     <div className="d-flex align-items-end justify-content-center position-relative header">
       <Link to="/">
-        <h3 className="heading">DiaTrack</h3>
+        <h3 className="heading">TeeRentals</h3>
       </Link>
       {hide ? '' : <button className="btn btn-secondary logout-btn" type="button" onClick={handleClick}>Logout</button>}
     </div>
