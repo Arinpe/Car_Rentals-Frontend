@@ -1,76 +1,83 @@
-# Find Your House
+# DIA-TRACK
+This is a web application that enables users to book an appointment for a car rentals. This application serves as a frontend application to consume a [Ruby on Rails API](https://github.com/Arinpe/Car_Rentals-Frontend).
 
-An App where you can view and rent your favourite cars to a list.
-
-# Home Page
-![screenshot](./snapshot2.PNG)
-
-# List of Houses
-![screenshot](./snapshot1.PNG)
+#### [DEMO LINK]()
 
 
-## About this project
+### Production Dependencies
 
-- This Application is built as a front end app consuming a Ruby on Rails [API]() separately deployed to Heroku. Authorization was from Auth0
+| **Dependency**   | **Use**                                              |
+| ---------------- | ---------------------------------------------------- |
+| prop-types       | Declare types for props passed into React components |
+| react            | React library                                        |
+| react-dom        | React library for DOM rendering                      |
+| react-redux      | Connects React components to Redux                   |
+| react-router-dom | React library for routing                            |
+| redux            | Library for unidirectional data flows                |
+| redux-thunk      | Async redux library middleware                       |
+| axios            | Make HTTP calls                                      |
+| react-chartjs-2  | To create chart                                      |
 
-## End Points
 
-POST
-- /users - (create user account)
-- /favourites - (create favourites)
+<br />
+<br />
 
-GET
-- /cars - (fetch all cars)
-- /favourites - (fetch favourite cars)
+### Development Dependencies
 
-## Built With
-- ReactJs
-- React Hooks
-- Auth0
-- Redux
-- Netlify (For deployment)
-- Jest
-- CSS (Modules)
-- HTML
-- Webpack
-- ES6 JavaScript.
+| **Dependency**                  | **Use**                                                          |
+| ------------------------------- | ---------------------------------------------------------------- |
+| babel-eslint                    | Lint modern JavaScript via ESLint                                |
+| eslint                          | Lints JavaScript                                                 |
+| eslint-plugin-react-hooks       | Adds additional React-hooks-related rules to ESLint              |
+| eslint-plugin-import            | Advanced linting of ES6 imports                                  |
+| eslint-plugin-react             | Adds additional React-related rules to ESLint                    |
+| jest                            | Automated testing framework                                      |
+| enzyme                          | Test components, and write assertions                            |
+| enzyme-adapter-react-16         | React adapter for enzyme                                         |
+| stylelint                       | Lints Css                                                        |
+| stylelint-config-standard       | Advanced linting configoration for css                           |
+| stylelint-csstree-validator     | Advanced linting validation for css                              |
 
-## Live Demo
-- For the full working application click [here]()
 
-## Installation
-- To get a local copy up and running follow these simple example steps.
+## Prerequisites
 
-### Setup
--  Clone [this](https://github.com/Arinpe/Car_Rentals-Frontend) repo
+- Internet
+- Computer
+## Install and Setup
 
-### Follow:
-1. cd into the project directory
-2. run npm install
-3. run npm start
-4. Navigate to localhost:3000
+- Clone repo to your local git clone https://github.com/Arinpe/Car_Rentals-Frontend.git
+- cd into the cloned repo
+- Open a terminal in the root of the app
+- Run `npm install- You can access all the design info (color, typography, layouts) in this link:
 
+
+### To install dependencies
+
+Run  your server with npm run start
+Open http://localhost:3000/ in your browser.
+
+### Testing
+
+- Open a terminal and run npm run test.
 ## Author
 
 👤 **Adesuyi Adetola**
 
-- Github: [@arinpe](https://github.com/Arinpe)
-- Twitter: [_detola_](https://twitter.com/_detola_)
-- Linkedin: [aadetola](https://linkedin.com/in/aadtola)
-
+- Github: [@Arinpe](https://github.com/Arinpe)
+- Twitter: [@_detola_](https://twitter.com/_detola_)
+- LinkedIn: [@aadetola](https://www.linkedin.com/in/aadetola)
 ## 🤝 Contributing
 
-- Contributions, issues and feature requests are welcome!
-
-- Feel free to check the [issues page](https://github.com/Arinpe/Car_Rentals-Frontend/issues)
-
+Contributions, issues and feature requests are welcome!
+Feel free to check the [issues page](https://github.com/Arinpe/Car_Rentals-Frontend/issues).
 ## Show your support
 
-- Give a ⭐️ if you like this project!
-
+Give a ⭐️ if you like this project!
 ## Acknowledgments
+
 - Microverse
+- You can access all the design info (color, typography, layouts) at this link:
+- Design(https://www.behance.net/gallery/13271423/Bodytrackit-An-iOs-app-Branding-UX-and-UI)
+- Design idea by Gregoire Vella on Behance
 
-- You can access all the design info (color, typography, layouts) in this [link](https://www.behance.net/gallery/37706679/Circle-(Landing-page-Dashboard-Mobile-App))
-
-- Design idea by [Alexey savitskiy on Behance](https://www.behance.net/alexey_savitskiy)
+## 📝 License
