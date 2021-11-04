@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router';
-import BgImage from '../assets/hompageBg.jpeg';
+import BgImage from '../assets/hompageBg.jpg';
 import { getHeaders } from '../services/common';
 
 const Homepage = () => {
@@ -21,7 +21,7 @@ const Homepage = () => {
         <main className="px-5 d-flex justify-content-center align-items-center text-center homepage__main" style={{ backgroundImage: `url(${BgImage})` }}>
           <div className="homepage__welcome_text">
             <h1>We Never Stop! We never falter!</h1>
-            <h3>Keep fit with pride</h3>
+            <h3>Speed at its best</h3>
             <Link className="btn btn-primary btn-lg" to="/register">Register</Link>
           </div>
         </main>
