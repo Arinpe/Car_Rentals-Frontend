@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import { Redirect, Route } from 'react-router-dom';
 import { getHeaders } from '../services/common';
+import Header from './Header';
 
 const ProtectedRoute = ({ Component, ...rest }) => {
   const headers = getHeaders();
@@ -15,7 +16,10 @@ const ProtectedRoute = ({ Component, ...rest }) => {
     <Route
       {...rest}
       render={() => (
-        <Component />
+        <>
+          <Header />
+          <Component />
+        </>
       )}
     />
   );

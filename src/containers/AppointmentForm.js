@@ -2,6 +2,7 @@
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 import { useHistory, useParams } from 'react-router';
 import FormContainer from './FormContainer';
 import Form from '../components/Form';
@@ -29,7 +30,8 @@ const AppointmentForm = () => {
     measurementData.append('date', date);
     measurementData.append('car_id', id);
     await createAppointment(measurementData);
-    history.push('/dashboard');
+    toast.success('Appointment created successfully');
+    history.push('/appointments');
   };
   return (
     <div className="measure__form">

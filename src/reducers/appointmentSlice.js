@@ -24,7 +24,7 @@ export const newAppointment = createAsyncThunk(
   },
 );
 
-export const carSlice = createSlice({
+export const appointmentSlice = createSlice({
   name: 'appointments',
   initialState,
   reducers: {
@@ -35,8 +35,8 @@ export const carSlice = createSlice({
 
 });
 
-export const { setAppointments } = carSlice.actions;
+export const { setAppointments } = appointmentSlice.actions;
 
-export const selectAppointments = (state) => state.appointments.appointments;
+export const selectAppointments = (state) => state.appointment.appointments;
 
-export default carSlice.reducer;
+export default appointmentSlice.reducer;
