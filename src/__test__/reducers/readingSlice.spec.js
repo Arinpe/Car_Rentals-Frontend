@@ -1,33 +1,35 @@
 import {
-  setReading, setReadings,
-} from '../../reducers/readingSlice';
+  setCar, setCars,
+} from '../../reducers/carSlice';
 import store from '../../store';
 
-describe('Reading Slice', () => {
-  test('should set reading in the store', async () => {
-    const reading = {
+describe('Car Slice', () => {
+  test('should set car in the store', async () => {
+    const car = {
       id: 1,
-      user_id: 1,
-      title: 'Weight',
-      goal: 75,
-      unit: 'kg',
+      img_url: 'imageurl',
+      price: '30000',
+      horsepower: 75,
+      model: 'RX300',
+      make: 'Lexus'
     };
 
-    expect(store.getState().user.user).toEqual({});
-    store.dispatch(setReading(reading));
-    expect(store.getState().measurement.measurement).toEqual(reading);
+    expect(store.getState().car.car).toEqual({});
+    store.dispatch(setCar(car));
+    expect(store.getState().car.car).toEqual(car);
   });
 
   test('should set readings in the store', async () => {
-    const readings = [{
-      id: 1,
-      user_id: 1,
-      title: 'Weight',
-      goal: 75,
-      unit: 'kg',
+    const cars = [{
+      id: 2,
+      img_url: 'imageurl',
+      price: '30000',
+      horsepower: 75,
+      model: 'RX550',
+      make: 'Lexus'
     }];
 
-    store.dispatch(setReadings(readings));
-    expect(store.getState().measurement.measurements).toEqual(readings);
+    store.dispatch(setCars(cars));
+    expect(store.getState().car.cars).toEqual(cars);
   });
 });

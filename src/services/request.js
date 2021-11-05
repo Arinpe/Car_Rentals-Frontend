@@ -1,7 +1,6 @@
 /* eslint-disable no-param-reassign */
 import axios from 'axios';
 import { toast } from 'react-toastify';
-
 import { getHeaders, setHeaders, clearHeaders } from './common';
 
 const baseApi = 'https://carrentalaapi.herokuapp.com/api/v1';
