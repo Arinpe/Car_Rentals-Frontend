@@ -11,7 +11,7 @@ describe('Car Slice', () => {
       price: '30000',
       horsepower: 75,
       model: 'RX300',
-      make: 'Lexus'
+      make: 'Lexus',
     };
 
     expect(store.getState().car.car).toEqual({});
@@ -26,7 +26,7 @@ describe('Car Slice', () => {
       price: '30000',
       horsepower: 75,
       model: 'RX550',
-      make: 'Lexus'
+      make: 'Lexus',
     }];
 
     store.dispatch(setCars(cars));

@@ -94,7 +94,6 @@ export const createAppointment = async (formData) => {
 
     return res.data;
   } catch (error) {
-    console.log(error);
     return loginHandleError(error);
   }
 };
