@@ -40,13 +40,13 @@ export const postRequest = async (url, body) => {
 };
 
 export const signup = async (formData) => {
-  const res = await postRequest(`${baseApi}/users`, formData);
+  const res = await postRequest('/users', formData);
   setHeaders(res.data.token);
   return res.data.data;
 };
 
 export const signIn = async (formData) => {
-  const res = await postRequest(`${baseApi}/login`, formData);
+  const res = await postRequest('/login', formData);
   setHeaders(res.data.token);
   return res.data.data;
 };
@@ -63,7 +63,7 @@ export const logOut = async () => {
 
 export const fetchAppointments = async () => {
   try {
-    const res = await instance.get(`${baseApi}/appointments`);
+    const res = await instance.get('/appointments');
     return res.data;
   } catch (error) {
     return loginHandleError(error);
@@ -72,7 +72,7 @@ export const fetchAppointments = async () => {
 
 export const fetchAppointment = async (id = 2) => {
   try {
-    const res = await instance.get(`${baseApi}/appointments/${id}`);
+    const res = await instance.get(`/appointments/${id}`);
     return res.data;
   } catch (error) {
     return loginHandleError(error);
@@ -81,7 +81,7 @@ export const fetchAppointment = async (id = 2) => {
 
 export const addMeasure = async (formData) => {
   try {
-    const res = await postRequest(`${baseApi}/measures`, formData);
+    const res = await postRequest('/measures', formData);
     return res.data;
   } catch (error) {
     return loginHandleError(error);
@@ -90,7 +90,7 @@ export const addMeasure = async (formData) => {
 
 export const createAppointment = async (formData) => {
   try {
-    const res = await postRequest(`${baseApi}/appointments`, formData);
+    const res = await postRequest('/appointments', formData);
 
     return res.data;
   } catch (error) {
@@ -101,7 +101,7 @@ export const createAppointment = async (formData) => {
 
 export const getUser = async () => {
   try {
-    const res = await instance.get(`${baseApi}/me`);
+    const res = await instance.get('/me');
     return res.data;
   } catch (error) {
     return loginHandleError(error);
@@ -110,7 +110,7 @@ export const getUser = async () => {
 
 export const getCars = async () => {
   try {
-    const res = await instance.get(`${baseApi}/cars`);
+    const res = await instance.get('/cars');
     return res.data;
   } catch (error) {
     return loginHandleError(error);
@@ -119,8 +119,7 @@ export const getCars = async () => {
 
 export const fetchCar = async (id) => {
   try {
-    const res = await instance.get(`${baseApi}/cars/${id}`);
-    console.log(res);
+    const res = await instance.get(`/cars/${id}`);
     return res.data;
   } catch (error) {
     return loginHandleError(error);
