@@ -2,8 +2,9 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-import { baseApi } from './constants';
 import { getHeaders, setHeaders, clearHeaders } from './common';
+
+const baseApi = 'https://carrentalaapi.herokuapp.com/api/v1';
 
 export const instance = axios.create({
   baseURL: baseApi,
