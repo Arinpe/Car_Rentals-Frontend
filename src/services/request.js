@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable no-param-reassign */
 import axios from 'axios';
 import { toast } from 'react-toastify';
