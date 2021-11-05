@@ -1,7 +1,7 @@
-# Car Rentals
+# Car Rentals.
 This is a web application that enables users to book an appointment for a car rentals. This application serves as a frontend application to consume a [Ruby on Rails API](https://github.com/Arinpe/Car_Rentals-Frontend).
 
-#### [DEMO LINK](https://infinite-river-09169.herokuapp.com/)
+#### [DEMO LINK](https://carrrental.herokuapp.com/)
 
 
 ### Production Dependencies
