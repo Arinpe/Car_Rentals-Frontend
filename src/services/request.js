@@ -28,7 +28,7 @@ instance.interceptors.request.use(
 
 const loginHandleError = (error) => {
   if (error?.response?.status === 401 || error?.response?.status === 422) {
-    error.response?.data?.errors?.forEach((msg) =>  toast.error(msg) );
+    error.response?.data?.errors?.forEach((msg) => toast.error(msg));
   } else {
     toast.error('Server error. Please try again later');
   }
