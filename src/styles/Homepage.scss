@@ -1,0 +1,25 @@
+.homepage {
+  color: white;
+
+  &__nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    background-color: transparent;
+  }
+
+  &__main {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: bolder;
+  // color: #fff;
+}

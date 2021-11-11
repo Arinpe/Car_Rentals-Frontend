@@ -1,0 +1,7 @@
+.register__trainer-info {
+  display: none;
+}
+
+#isTrainer:checked + #register__trainer-info {
+  display: block;
+}

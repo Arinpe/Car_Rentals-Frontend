@@ -1,0 +1,22 @@
+@import './variables.scss';
+
+.menuitem {
+  font-size: 17px;
+}
+
+.menuitem__link {
+  width: 165px;
+  color: white;
+
+  svg {
+    margin-right: 10px;
+    color: white;
+  }
+
+  &:hover,
+  &:hover svg {
+    color: $secondary-color;
+    font-weight: bolder;
+    text-decoration: none;
+  }
+}
