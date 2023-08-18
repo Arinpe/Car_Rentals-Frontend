@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import '~bootstrap/scss/bootstrap.scss';
+@import './variables.scss';
+@import './Homepage.scss';
+@import './Register.scss';
+
+* {
+  font-family: 'Helvetica Neue', sans-serif !important;
+}
+
+.measurements {
+  max-width: 1600px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header {
+  min-height: 70px;
+  background-color: $light-blue;
+  color: #fff;
+}
+
+.tabs,
+.measurement {
+  background-color: $light-gray;
+  height: calc(100vh - 140px);
+  overflow-y: auto;
+}
+
+.tab {
+  .tab-title {
+    background-color: $light-gray;
+    color: $dark-gray;
+  }
+
+  .date {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .circle-range {
+    max-width: 40px;
+  }
+
+  .tab-content {
+    background-color: $white;
+  }
+}
+
+.charts {
+  max-width: 70px;
+  margin-left: auto;
+}
+
+.measurement-heading {
+  background-color: $white;
+}
+
+.unit {
+  color: $dark-gray;
+  font-size: 12px;
+}
+
+.footer {
+  background-color: $dark-gray;
+  height: 70px;
+
+  .plus-icon {
+    font-size: 3rem;
+    color: white;
+    fill: white;
+
+    svg {
+      vertical-align: text-top;
+    }
+  }
+}
+
+.form-container__image {
+  display: none;
+}
+
+.measure__form {
+  max-width: 420px;
+  margin: auto;
+
+  .form-container__image,
+  .form__footer {
+    display: none;
+  }
+
+  .form__wrapper {
+    width: 100%;
+  }
+}
+
+.measurement__card {
+  width: 46%;
+  text-align: right;
+  background-color: $white;
+
+  p {
+    width: 100%;
+  }
+}
+
+.max-width {
+  max-width: 420px;
+  margin: auto;
+}
+
+.btn-primary {
+  background-color: $light-blue;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $text-color;
+  }
+}
+
+.logout-btn {
+  border: none;
+  bottom: 7px;
+  position: absolute;
+  right: 10px;
+  background: transparent;
+}
+
+.carLinks,
+.car_card {
+  width: calc(25% - 10px);
+  margin: 5px;
+}
+
+.card-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.car_banner {
+  display: flex;
+  justify-content: center;
+}
+
+.car_make,
+.car_model,
+.car_year {
+  text-transform: capitalize;
+  margin-right: 15px;
+  text-align: center;
+}
+
+.car_description {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
